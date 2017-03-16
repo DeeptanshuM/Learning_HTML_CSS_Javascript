@@ -12,6 +12,30 @@
       </fieldset> <br>
       <fieldset>
               <legend>Your general details</legend>
+              <label for="name">Name: </label>
+              <input type="text" name="name"><br>
+
+              <label for="gender">Gender: </label>
+              <input type="radio" name="gender" value="Male"> Male <input type="radio" name="gender" value="Female"> Female <br>
+
+              <label for="age">Age: </label>
+              <input type="number" min="18" max="99" step="1" value="18" name="age" required><br>
+
+              <label for="DOB">Date of birth: </label>
+              <input type="date" name="DOB"><br>
+
+              <label for="color">Favorite color: </label>
+              <input type="color" name="color"> <br>
+
+              <label for="countries">Country: </label>
+              <select name="countries">
+                <option value="nada">no selection</option>
+                <option value="usa">USA</option>
+                <option value="can">Canada</option>
+                <option value="mex">Mexico</option>
+               	<option value="arg">Argentina</option>
+                <option value="per">Peru</option>
+              </select>
       </fieldset> <br>
       <fieldset>
               <legend>Your indicators</legend>
@@ -20,6 +44,6 @@
               <legend>Your Contact Information</legend>
       </fieldset> <br>
       <input type="submit" value="Send">
-</form>
+    </form>
   </body>
 </html>
