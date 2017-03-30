@@ -24,24 +24,26 @@
           vertical-align: center;
         }
         .labelRangeLow {
-          width: 40px;
+          width: auto;
           text-align: center;
           color: white;
           vertical-align: center;
           background: brown
         }
         .labelRangeHigh {
-          width: 40px;
+          width: auto;
           text-align: center;
           color: white;
           vertical-align: center;
           background: darkorchid
         }
+        label:hover { font-size: 40px }
+        input:hover { font-size: 40px }
       </style>
   </head>
   <body>
     <h1>Please Enter Your Details For Our Dating Website! </h1>
-    <form>
+    <form method="post" enctype="multipart/form-data" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
       <fieldset>
               <legend>Your face</legend>
               <label for="selectFile">Choose file: </label>
@@ -112,5 +114,6 @@
       </fieldset> <br>
       <input type="submit" value="Send">
     </form>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
   </body>
 </html>
