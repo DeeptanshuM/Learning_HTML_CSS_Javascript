@@ -12,29 +12,31 @@
         label {
           display: inline-block;
           width: 180px;
-          text-align: top;
           text-align: right;
+          vertical-align: top
         }
         textarea {
           width: 360px;
           height: 50px
         }
         .labelCheckboxandRadio {
-          width: auto
+          width: auto;
+          vertical-align: center;
         }
         .labelRangeLow {
           width: 40px;
           text-align: center;
           color: white;
+          vertical-align: center;
           background: brown
         }
         .labelRangeHigh {
           width: 40px;
           text-align: center;
           color: white;
+          vertical-align: center;
           background: darkorchid
         }
-      
       </style>
   </head>
   <body>
@@ -55,9 +57,9 @@
 
               <label for="gender">Gender: </label>
               <input type="radio" id="radio1" name="gender" value="Male">
-              <label for="radio1" class="labelCheckboxandRadio">Male</label>
+              Male
               <input type="radio" id="radio2" name="gender" value="Female">
-              <label for="radio2" class="labelCheckboxandRadio">Female</label><br>
+              Female <br>
 
               <label for="age">Age: </label>
               <input type="number" min="18" max="99" step="1" value="18" name="age" required><br>
