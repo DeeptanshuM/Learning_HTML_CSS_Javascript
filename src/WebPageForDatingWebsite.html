@@ -12,12 +12,29 @@
         label {
           display: inline-block;
           width: 180px;
-          text-align: right;
           text-align: top;
+          text-align: right;
+        }
+        textarea {
+          width: 360px;
+          height: 50px
         }
         .labelCheckboxandRadio {
           width: auto
         }
+        .labelRangeLow {
+          width: 40px;
+          text-align: center;
+          color: white;
+          background: brown
+        }
+        .labelRangeHigh {
+          width: 40px;
+          text-align: center;
+          color: white;
+          background: darkorchid
+        }
+      
       </style>
   </head>
   <body>
@@ -34,17 +51,19 @@
       <fieldset>
               <legend>Your general details</legend>
               <label for="name">Name: </label>
-              <input type="text" name="name"><br>
+              <input type="text" name="name" placeholder="Your full name"><br>
 
               <label for="gender">Gender: </label>
-              <input type="radio" name="gender" value="Male"> Male
-              <input type="radio" name="gender" value="Female"> Female <br>
+              <input type="radio" id="radio1" name="gender" value="Male">
+              <label for="radio1" class="labelCheckboxandRadio">Male</label>
+              <input type="radio" id="radio2" name="gender" value="Female">
+              <label for="radio2" class="labelCheckboxandRadio">Female</label><br>
 
               <label for="age">Age: </label>
               <input type="number" min="18" max="99" step="1" value="18" name="age" required><br>
 
               <label for="DOB">Date of birth: </label>
-              <input type="date" name="DOB"><br>
+              <input type="date" name="DOB" value="dd/mm/yyyy"><br>
 
               <label for="color">Favorite color: </label>
               <input type="color" name="color"> <br>
@@ -62,9 +81,13 @@
       <fieldset>
               <legend>Your indicators</legend>
               <label for="height">Height: </label>
-              Short <input type="range" min="0" max="100" step="5" value="50" name="mood"> Tall<br>
+              <label for="heightRange" class="labelRangeLow">Short </label>
+              <input type="range" id="heightRange" min="0" max="100" step="5" value="50" name="mood">
+              <label for="heightRange" class="labelRangeHigh"> Tall</label><br>
               <label for="salary">Salary: </label>
-              Poor <input type="range" min="0" max="100" step="5" value="50" name="mood"> Rich<br>
+              <label for="salaryRange" class="labelRangeLow">Poor </label>
+              <input type="range" id="salaryRange" min="0" max="100" step="5" value="50" name="mood"></input>
+              <label for="salaryRange" class="labelRangeHigh"> Rich</label><br>
       </fieldset> <br>
       <fieldset>
               <legend>Your Contact Information</legend>
@@ -74,16 +97,16 @@
               <label for "mobile">Mobile: </label>
               <input type="tel" name="mobile"><br>
 
-              Address: <textarea rows="3" cols="30" name="feedback">
-              </textarea><br>
+              <label for "feedback">Address: </label>
+              <textarea rows="3" cols="30" name="feedback"></textarea><br>
 
               <label for "contactMethod">Method to contact you: </label>
               <input type="checkbox" id="checkbox1" name="contactMethod" value="car">
-                <label for="checkbox1">Email</label>
+              <label for="checkbox1" class="labelCheckboxandRadio">Email</label>
               <input type="checkbox" id="checkbox2" name="contactMethod" value="teddy bear">
-                <label for="checkbox2">Whats app</label>
-                <input type="checkbox" id="checkbox3" name="contactMethod" value="toothbrush">
-                  <label for="checkbox3">In-app chat </label><br>
+              <label for="checkbox2" class="labelCheckboxandRadio">Whats app</label>
+              <input type="checkbox" id="checkbox3" name="contactMethod" value="toothbrush">
+              <label for="checkbox3" class="labelCheckboxandRadio">In-app chat </label><br>
       </fieldset> <br>
       <input type="submit" value="Send">
     </form>
