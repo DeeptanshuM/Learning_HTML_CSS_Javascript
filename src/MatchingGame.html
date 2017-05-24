@@ -1,5 +1,29 @@
 <html>
 <head>
     <title>Practice: implementing a DOM by coding a simple matching game</title>
+    <style>
+        div {
+            position: absolute;
+            width:500px;
+            height:500px
+        }
+        img {
+            position: absolute
+        }
+        #rightSide {
+            left: 500px;
+            border-left: 1px solid black
+        }
+    </style>
 </head>
+<body>
+    <p>
+        The game is to find the extra smiling face on the left.<br>
+        Click on it to proceed to the next round.<br>
+        You lose if you click on a smiley face which is also present on the right side.
+    </p>
+
+    <div id="leftSide"></div>
+    <div id="rightSide"></div>
+</body>
 </html>
