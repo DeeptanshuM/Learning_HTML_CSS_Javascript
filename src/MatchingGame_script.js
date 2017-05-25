@@ -19,7 +19,13 @@ function generateFaces() {
     theLeftSide.lastChild.onclick =
         function nextLevel(event){
             event.stopPropagation();
-            alert("hdsfhljdsfjhkdfjklsdf");
+
+            while(theLeftSide.firstChild)
+                theLeftSide.removeChild(theLeftSide.firstChild);
+
+            while(theRightSide.firstChild)
+                theRightSide.removeChild(theRightSide.firstChild);
+
             numberOfFaces += 5;
             generateFaces();
         };
@@ -32,16 +38,3 @@ theBody.onclick =
         theBody.onclick = null;
         theLeftSide.lastChild.onclick = null;
     };
-
-// function printChildInfo(parent)
-// {
-//     var childs = parent.childNodes;
-//
-//     for (var i = 0; i < childs.length; ++i)
-//     {
-//         var c = childs[i];
-//
-//         console.log([c.nodeName, c.nodeValue]);
-//     }
-// }
-// printChildInfo(theLeftSide);
