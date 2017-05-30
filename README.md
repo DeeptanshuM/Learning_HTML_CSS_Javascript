@@ -1,4 +1,5 @@
 List of projects done (in chronological order):
-Matching Game
-Color Guessing Game
-WebPage for Dating Website
+- Formatted a given webpage using bootstrap 
+- Matching Game
+- Color Guessing Game
+- WebPage for Dating Website
