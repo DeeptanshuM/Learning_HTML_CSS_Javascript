@@ -17,6 +17,27 @@ function loadData() {
 
     $body.append('<img class="bgimg" src="' + streetviewUrl + '">');
 
+    var nytkey = config.NYT_KEY;
+    var nytUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    nytUrl += '?' + $.param({
+            'q': $('#city').val(),
+            'sort': "newest",
+            'api-key': nytkey
+        });
+
+    $.ajax({
+        url: nytUrl,
+        method:'GET',             //from NYT we 'get' JSON data.
+    }).done(function(data) {
+        $.each(data.response.docs, function() {
+            var articleLink = '<a href="' + this.web_url + '">' + this.headline.main + '</a>';
+            var articleLead = '<p>' + this.lead_paragraph + '</p>';
+            $nytElem.append('<li class="article">' + articleLink + articleLead + '</li>');
+        });
+    }).fail(function() {
+        $nytHeaderElem.text('New York Times Articles Could Not Be Loaded');
+    });
+
     return false;
 };
 
